@@ -23,10 +23,7 @@ content: `<div>
 heading: "Article Two",
 date: "Feb 21.2017",
 content: `<div>
-        This is the content for my second article . And this is all the mess I could muster to fill this page up a little bit. I
-        I am only just trying .
-        
-        Lets see....
+        This is the content for my second article . And this is all the mess.
     </div>`
    },
    'article-three': {
