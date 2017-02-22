@@ -16,7 +16,7 @@ var articleone={
             
             Lets see....
         </div>`
-}
+};
 
 function createTemplate(data){
 var title=data.title;
