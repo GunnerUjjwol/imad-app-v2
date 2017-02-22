@@ -7,34 +7,34 @@ app.use(morgan('combined'));
 
 
 var articles={
-   'article-one': {
-title: "Article One | Ujjwol Dandekhya",
-heading: "Article One",
-date: "Feb 22.2017",
-content: `<div>
-        This is the content for my first article . And this is all the mess I could muster to fill this page up a little bit. I
-        I am only just trying .
-        
-        Lets see....
+ 'article-one': {
+    title: "Article One | Ujjwol Dandekhya",
+    heading: "Article One",
+    date: "Feb 22.2017",
+    content: `<div>
+    This is the content for my first article . And this is all the mess I could muster to fill this page up a little bit. I
+    I am only just trying .
+    
+    Lets see....
     </div>`
 },
-   'article-two': {
-       title: "Article Two | Ujjwol Dandekhya",
-heading: "Article Two",
-date: "Feb 21.2017",
-content: `<div>
-        This is the content for my second article . And this is all the mess.
+ 'article-two': {
+    title: "Article Two | Ujjwol Dandekhya",
+    heading: "Article Two",
+    date: "Feb 21.2017",
+    content: `<div>
+    This is the content for my second article . And this is all the mess.
     </div>`
    },
-   'article-three': {
-       title: "Article Three | Ujjwol Dandekhya",
-heading: "Article Three",
-date: "Feb 23.2017",
-content: `<div>
-        This is the content for my third article . And this is all the mess I could muster to fill this page up a little bit. I
-        I am only just trying .
-        
-        Lets see....
+ 'article-three': {
+    title: "Article Three | Ujjwol Dandekhya",
+    heading: "Article Three",
+    date: "Feb 23.2017",
+    content: `<div>
+    This is the content for my third article . And this is all the mess I could muster to fill this page up a little bit. I
+    I am only just trying .
+    
+    Lets see....
     </div>`
    }
 };
@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName', function (req,res){
     //articleName is article-one
     var articleName=req.params.articleName;
-    res.send(createTemplate(articles(articleName)));
+    res.send(createTemplate(articles[articleName]));
 });
 
 
