@@ -100,7 +100,7 @@ app.get('/',function(){
     });
 });
 
-app.get('/', function (req, res) {
+app.get('/test-db', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
