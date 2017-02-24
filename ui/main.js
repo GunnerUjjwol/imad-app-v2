@@ -24,12 +24,10 @@ button.onclick= function(){
 };
 
 
-
+//Submit name
 var submit=document.getElementById('submit_btn');
 submit.onclick= function(){
-    //submit name
-    var nameInput=document.getElementById('nameInput');
-var name=nameInput.value;
+    
     //Create a request object
     var request= new XMLHttpRequest();
     
@@ -53,6 +51,9 @@ var name=nameInput.value;
     };
     
     //Make the request
+    var nameInput=document.getElementById('nameInput');
+var name=nameInput.value;
+    
     request.open('GET','http://gunnerujjwol.imad.hasura-app.io/submit-name>name=' +name, true);
     request.send(null);
 
