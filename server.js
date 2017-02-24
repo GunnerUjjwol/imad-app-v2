@@ -87,7 +87,7 @@ return htmlTemplate;
 }
 
 var pool = new Pool(config);
-app.get('/',function(){
+app.get('/test-db',function(){
     //make a select request
     //return response with a result
     pool.query('SELECT * FROM test', function(err,result){
@@ -100,7 +100,7 @@ app.get('/',function(){
     });
 });
 
-app.get('/test-db', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
