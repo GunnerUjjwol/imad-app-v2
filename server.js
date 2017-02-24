@@ -87,7 +87,7 @@ return htmlTemplate;
 }
 
 var pool = new Pool(config);
-app.get('/test-db',function(){
+app.get('/test-db',function(req,res){
     //make a select request
     //return response with a result
     pool.query('SELECT * FROM test', function(err,result){
