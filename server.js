@@ -6,6 +6,12 @@ var app = express();
 app.use(morgan('combined'));
 
 
+counter=0;
+app.get('/counter',  function(req,res){
+   counter+=1;
+   res.send(counter.toString());
+});
+
 var articles={
  'article-one': {
     title: "Article One | Ujjwol Dandekhya",
@@ -77,11 +83,7 @@ var htmlTemplate=`
 return htmlTemplate;
 }
 
-counter=0;
-app.get('/counter',  function(req,res){
-   counter+=1;
-   res.send(counter.toString());
-});
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
