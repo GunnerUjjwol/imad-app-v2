@@ -128,10 +128,10 @@ app.get('/articles/:articleName', function (req,res){
     
         pool.query("SELECT * FROM aricle1 where title= '" + req.params.articleName +"'" , function(err,result){
             if(err){
-                req.staus(500).send(err.toString());
+                req.status(500).send(err.toString());
             }else{
                 if (result.rows.length===0){
-                    req.send(404).send("Article Not Found");
+                    res.staus(404).send("Article Not Found");
                 }else{
                     var articleData=result.rows[0];
                     res.send(createTemplate(articleData));
