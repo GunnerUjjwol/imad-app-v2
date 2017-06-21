@@ -1,7 +1,7 @@
 <?php
 
 
-require 'E:\UniServer\UniServerZ\www\WeatherBot\vendor\autoload.php';
+require _DIR_.'\vendor\autoload.php';
 use Mpociot\BotMan\BotManFactory;
 use Mpociot\BotMan\BotMan;
 
